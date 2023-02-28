@@ -8,7 +8,7 @@ public class Q4_AreaCalculator {
         int choice = 0;
         int attempts = 0;
 
-        while (choice < 1 || choice > 3) {
+        while (choice >0 || choice <= 3) {
             System.out.println("Enter the shape:");
             System.out.println("1. Triangle");
             System.out.println("2. Rectangle");
