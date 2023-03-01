@@ -17,6 +17,6 @@ public class App {
             double Average = (double)sum / 2;
             JOptionPane.showMessageDialog(null,"The average is: " + Average);
             JOptionPane.showConfirmDialog(null, "Do you want to continue and add another set of numbers?");
-        }while(Valid ==JOptionPane.YES_OPTION);
+        }while(Valid == JOptionPane.YES_OPTION);
     }
 }
