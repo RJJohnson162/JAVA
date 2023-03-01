@@ -54,7 +54,8 @@ public class Q5_Sales {
         }
 
         // Display the item totals and grand total
-        System.out.print("Item Totals:\t");
+        System.out.println("Item\t");
+        System.out.print("Totals:\t");
         for (int i = 0; i < items.length; i++) {
             System.out.print(itemTotals[i] + "\t");
         }
