@@ -5,25 +5,25 @@ public class Q4_AreaCalculator {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int choice = 0;
-        int attempts = 0;
+        int shapeChoice = 0;
+        int Trials = 0;
 
-        while (choice < 1 || choice > 3) {
+        while (shapeChoice < 1 || shapeChoice > 3) {
             System.out.println("Enter the shape:");
             System.out.println("1. Triangle");
             System.out.println("2. Rectangle");
             System.out.println("3. Circle");
-            System.out.print("Your choice: ");
-            choice = scanner.nextInt();
-            attempts++;
+            System.out.print("Your shapeChoice: ");
+            shapeChoice = scanner.nextInt();
+            Trials++;
 
-            if (attempts == 3) {
-                System.out.println("Too many attempts. Program exiting.");
+            if (Trials == 3) {
+                System.out.println("Too many Trials. Program exiting.");
                 System.exit(0);
             }
         }
 
-        switch (choice) {
+        switch (shapeChoice) {
             case 1:
                 System.out.print("Enter base of triangle: ");
                 double base = scanner.nextDouble();

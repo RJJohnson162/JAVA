@@ -7,9 +7,9 @@ public class Q3_creditEvaluator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter number of customers: ");
-        int numCustomers = scanner.nextInt();
+        int numOfCustomers = scanner.nextInt();
 
-        for (int i = 1; i <= numCustomers; i++) {
+        for (int i = 1; i <= numOfCustomers; i++) {
             System.out.println("Customer " + i);
 
             System.out.print("Enter credit limit: ");

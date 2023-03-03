@@ -4,9 +4,9 @@ public class Q2_NestedLoops {
 
         int numRows = 6; // number of rows in the output
 
-        for (int i = 1; i <= numRows; i++) {
+        for (int row_Index = 1; row_Index <= numRows; row_Index++) {
             for (int j = 1; j <= numRows; j++) {
-                if ((i == j) || ((i == 1) || (i == 6)) ) {
+                if ((row_Index == j) || ((row_Index == 1) || (row_Index == 6)) ) {
                     System.out.print("& ");
                 } else {
                     System.out.print("* ");

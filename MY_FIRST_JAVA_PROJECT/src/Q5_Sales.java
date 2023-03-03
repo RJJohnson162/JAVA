@@ -5,11 +5,11 @@ public class Q5_Sales {
     public static void main(String[] args) {
 
         // Define the names of the salesmen and items as arrays
-        String[] salesmen = {"Brian", "Joan", "Mike", "Chris", "Diana", "John", "Grace", "Paul", "Lucy", "James"};
+        String[] salesmen = {"Brian", "Joan", "Mike"};//, "Chris", "Diana", "John", "Grace", "Paul", "Lucy", "James"};
         String[] items = {"Item1", "Item2", "Item3", "Item4", "Item5"};
 
         // Define a 2D array to store the sales made by each salesman for each item
-        int[][] sales = new int[10][5];
+        int[][] sales = new int[3][5];
 
         // Define variables for calculating totals
         int grandTotal = 0;
