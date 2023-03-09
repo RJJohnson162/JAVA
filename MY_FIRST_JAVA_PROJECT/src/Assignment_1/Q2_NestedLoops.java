@@ -1,3 +1,4 @@
+package Assignment_1;
 public class Q2_NestedLoops {
 
     public static void main(String[] args) {
@@ -15,6 +16,4 @@ public class Q2_NestedLoops {
             System.out.println(); // move to next line
         }
     }
-
 }
-
