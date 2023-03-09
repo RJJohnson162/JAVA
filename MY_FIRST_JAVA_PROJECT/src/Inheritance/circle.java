@@ -1,7 +1,4 @@
 package Inheritance;
-
-import java.util.Scanner;
-
 public class circle {
     protected double radius;
     void setRadius(double r) {

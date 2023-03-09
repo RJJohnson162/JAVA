@@ -19,6 +19,5 @@ public class Inheritance {
         myCircle.findArea());
         System.out.println("The volume of cylinder is: " + 
         myCylinder.findVolume());
-        }
-        
+    }
 }
