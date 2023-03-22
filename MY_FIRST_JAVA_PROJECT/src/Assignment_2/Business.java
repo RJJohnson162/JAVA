@@ -1,5 +1,5 @@
 package Assignment_2;
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Business {
     private double buyingPrice;
@@ -21,35 +21,39 @@ public class Business {
     public void computeProfitOrLoss() {
         double profit = sellingPrice - (buyingPrice + transportCost);
         if (profit > 0) {
-            System.out.println("Profit made: $" + profit);
+            JOptionPane.showMessageDialog(null, "Profit made: $" + profit);
         } else if (profit < 0) {
-            System.out.println("Loss made: $" + (-profit));
+            JOptionPane.showMessageDialog(null, "Loss made: $" + (-profit));
         } else {
-            System.out.println("No profit or loss made");
+            JOptionPane.showMessageDialog(null, "No profit or loss made");
         }
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter buying price: ");
-        double buyingPrice = input.nextDouble();
-        System.out.print("Enter selling price: ");
-        double sellingPrice = input.nextDouble();
-        System.out.print("Enter transport cost: ");
-        double transportCost = input.nextDouble();
+        String input;
+        double buyingPrice, sellingPrice, transportCost;
+
+        input = JOptionPane.showInputDialog("Enter buying price for item 1:");
+        buyingPrice = Double.parseDouble(input);
+
+        input = JOptionPane.showInputDialog("Enter selling price for item 1:");
+        sellingPrice = Double.parseDouble(input);
+
+        input = JOptionPane.showInputDialog("Enter transport cost for item 1:");
+        transportCost = Double.parseDouble(input);
 
         Business item1 = new Business(buyingPrice, sellingPrice, transportCost);
 
-        System.out.print("Enter buying price for the item: ");
-        buyingPrice = input.nextDouble();
-        System.out.print("Enter item selling price: ");
-        sellingPrice = input.nextDouble();
-        System.out.print("Enter transport cost: ");
-        transportCost = input.nextDouble();
+        input = JOptionPane.showInputDialog("Enter buying price for item 2:");
+        buyingPrice = Double.parseDouble(input);
+
+        input = JOptionPane.showInputDialog("Enter selling price for item 2:");
+        sellingPrice = Double.parseDouble(input);
+
+        input = JOptionPane.showInputDialog("Enter transport cost for item 2:");
+        transportCost = Double.parseDouble(input);
 
         Business item2 = new Business(buyingPrice, sellingPrice, transportCost);
-
-        input.close();
 
         item1.computeProfitOrLoss();
         item2.computeProfitOrLoss();
