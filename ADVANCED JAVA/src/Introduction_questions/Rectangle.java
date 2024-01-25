@@ -1,15 +1,26 @@
 package Introduction_questions;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public static void main(String[] args) {
-    System.out.println("Enter width: ");
-    Scanner input = new Scanner(System.in);
-    double Width = input.nextDouble();
-    System.out.println("Enter height: ");
-    double Height = input.nextDouble();
+public class Rectangle {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-    double Area = Width * Height;
-    double Perimeter = 2*(Width + Height);
+        try {
+            System.out.println("Enter width: ");
+            double width = input.nextDouble();
 
-    System.out.println("The Area of the rectangle is " + Area + " and the perimeter is " + Perimeter);
+            System.out.println("Enter height: ");
+            double height = input.nextDouble();
+
+            double area = width * height;
+            double perimeter = 2 * (width + height);
+
+            System.out.println("The Area of the rectangle is " + area + " and the perimeter is " + perimeter);
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input! Please enter valid numeric values.");
+        } finally {
+            input.close();
+        }
+    }
 }
