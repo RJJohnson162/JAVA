@@ -54,6 +54,7 @@ public class Switch_caseMenu {
                             if (Quantity >= 1) {
                                 double totalCost = Quantity * Price[ItemNumber - 1];
                                 System.out.println("Your Total cost is " + totalCost);
+                                System.out.println("\nThank you for your business come back again!");
                                 break;
                             }else{
                                 System.out.println("Invalid quantity entered. Please enter a number greater than zero.");
