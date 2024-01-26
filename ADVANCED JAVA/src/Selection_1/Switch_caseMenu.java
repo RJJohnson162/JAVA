@@ -19,7 +19,7 @@ public class Switch_caseMenu {
         System.out.print("\n");
         System.out.println("Item\t\t\t\tPrice");
         for (int counter = 0; counter < MenuItems.length; counter++) {
-            System.out.println("1. " + MenuItems[counter] + "\t\t\t" + Price[counter]);
+            System.out.println((counter + 1) +". " + MenuItems[counter] + "\t\t\t" + Price[counter]);
         }
 
         System.out.print('\n');
