@@ -21,8 +21,8 @@ public class Commodity {
         Scanner input = new Scanner(System.in);
         System.out.println("\nEnter details for item " + itemNumber + ":");
         this.buyingPrice = inputErrorHandling(input, "Enter buying price: ");
-        this.sellingPrice = inputErrorHandling(input, "Enter selling price: ");
         this.transportCost = inputErrorHandling(input, "Enter transport cost: ");
+        this.sellingPrice = inputErrorHandling(input, "Enter selling price: ");
     }
 
     public void calculate() {
