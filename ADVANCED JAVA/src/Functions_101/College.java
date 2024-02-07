@@ -19,7 +19,7 @@ public class College {
     }
 
     public double getAverage() {
-        return average;
+        return Math.round(average);
     }
 
     public double getTotal() {
@@ -45,8 +45,8 @@ public class College {
         System.out.println("The marks for Programming are: \t\t\t" + programming + ".");
         System.out.println("The marks for Networking are: \t\t\t" + networking + ".");
         System.out.println("The marks for Web Design are: \t\t\t" + webDesign + ".");
-        System.out.println("The Total mark is: \t\t\t\t" + total + ".");
-        System.out.println("The average for the marks is: \t\t\t" + average + ".");
+        System.out.println("The Total mark is: \t\t\t\t" + getTotal() + ".");
+        System.out.println("The average for the marks is: \t\t\t" + getAverage() + ".");
     }
 
     private static double dataIn(String message, Scanner input) {
