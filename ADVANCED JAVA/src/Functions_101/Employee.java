@@ -45,6 +45,7 @@ public class Employee {
                                 } else {
                                     System.out.println("Invalid Employee numbers.");
                                 }
+                                break;
                             }catch (InputMismatchException e){
                                 System.out.println("Please enter a valid number!");
                                 continue;

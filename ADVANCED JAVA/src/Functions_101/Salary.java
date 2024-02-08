@@ -65,7 +65,7 @@ public class Salary {
         Scanner prompt = new Scanner(System.in);
         System.out.println("____________EMPLOYEE " + employeeNum + " DATA____________");
         System.out.print("\n");
-        System.out.println("Enter the data for employee "+ employeeNum);
+        System.out.println("\tEnter the data for employee "+ employeeNum);
         this.basic_salary = inputErrorHandling(prompt, "Please enter your Basic Salary");
         this.allowance = inputErrorHandling(prompt, "Please enter your Allowance");
         this.tax_rate = inputErrorHandling(prompt,"Please enter your Tax Rate");
@@ -73,9 +73,9 @@ public class Salary {
         Compute();
     }
     private void Compute (){
-        gross_salary=basic_salary + allowance;
-        tax_amount = tax_rate/100 * gross_salary;
-        net_salary = gross_salary - tax_amount;
+        gross_salary=Math.round(basic_salary + allowance);
+        tax_amount = Math.round(tax_rate/100 * gross_salary);
+        net_salary = Math.round(gross_salary - tax_amount);
     }
     public void output(int employeeNum){
         System.out.println("____________EMPLOYEE " + employeeNum + " DETAILS____________");
