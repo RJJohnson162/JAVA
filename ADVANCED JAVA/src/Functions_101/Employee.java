@@ -1,4 +1,5 @@
 package Functions_101;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Employee {
     public static void main(String[] args){
@@ -6,8 +7,17 @@ public class Employee {
             Scanner input = new Scanner(System.in);
             System.out.println("____________WELCOME TO THE SYSTEM____________");
             System.out.print("\n");
-            System.out.println("Please enter the number if employees you'd wish to enter data for: ");
-            int employees = input.nextInt();
+            int employees;
+            while(true){
+                try{
+                    System.out.println("Please enter the number if employees you'd wish to enter data for: ");
+                    employees = input.nextInt();
+                    break;
+                } catch (InputMismatchException e){
+                    System.out.println("Please enter a valid number!");
+                    continue;
+                }
+            }
             //Create an array of employee objects and populate it with user-inputted data
             Salary[] Employees = new Salary[employees];
 
@@ -22,14 +32,23 @@ public class Employee {
                 char choice = input.next().toUpperCase().charAt(0);
                 if (choice == 'Y'){
                     if (choice == 'Y') {
-                        System.out.println("Enter the first Employee number:");
-                        int employeeOne = input.nextInt();
-                        System.out.println("Enter the second Employee number:");
-                        int employeeTwo = input.nextInt();
-                        if (employeeOne > 0 && employeeOne <= employees && employeeTwo > 0 && employeeTwo <= employees) {
-                            Salary.Compare(Employees[employeeOne - 1], Employees[employeeTwo - 1]);
-                        } else {
-                            System.out.println("Invalid Employee numbers.");
+                        int employeeOne;
+                        int employeeTwo;
+                        while(true){
+                            try{
+                                System.out.println("Enter the first Employee number:");
+                                employeeOne = input.nextInt();
+                                System.out.println("Enter the second Employee number:");
+                                employeeTwo = input.nextInt();
+                                if (employeeOne > 0 && employeeOne <= employees && employeeTwo > 0 && employeeTwo <= employees) {
+                                    Salary.Compare(Employees[employeeOne - 1], Employees[employeeTwo - 1]);
+                                } else {
+                                    System.out.println("Invalid Employee numbers.");
+                                }
+                            }catch (InputMismatchException e){
+                                System.out.println("Please enter a valid number!");
+                                continue;
+                            }
                         }
                     }
                 }
