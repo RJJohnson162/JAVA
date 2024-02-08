@@ -17,7 +17,7 @@ public class Employee {
                 Employees[i].output(i + 1);
             }
 
-            if(employees > 1){
+            if(employees >= 1){
                 System.out.println("Would you like to compare the net salaries of two employees? Y/N: ");
                 char choice = input.next().toUpperCase().charAt(0);
                 if (choice == 'Y'){
