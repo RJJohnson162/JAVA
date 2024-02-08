@@ -17,18 +17,20 @@ public class Employee {
                 Employees[i].output(i + 1);
             }
 
-            System.out.println("Would you like to compare the net salaries of two employees? Y/N: ");
-            char choice = input.next().toUpperCase().charAt(0);
-            if (choice == 'Y'){
-                if (choice == 'Y') {
-                    System.out.println("Enter the first Employee number:");
-                    int employeeOne = input.nextInt();
-                    System.out.println("Enter the second Employee number:");
-                    int employeeTwo = input.nextInt();
-                    if (employeeOne > 0 && employeeOne <= employees && employeeTwo > 0 && employeeTwo <= employees) {
-                        Salary.Compare(Employees[employeeOne - 1], Employees[employeeTwo - 1]);
-                    } else {
-                        System.out.println("Invalid Employee numbers.");
+            if(employees > 1){
+                System.out.println("Would you like to compare the net salaries of two employees? Y/N: ");
+                char choice = input.next().toUpperCase().charAt(0);
+                if (choice == 'Y'){
+                    if (choice == 'Y') {
+                        System.out.println("Enter the first Employee number:");
+                        int employeeOne = input.nextInt();
+                        System.out.println("Enter the second Employee number:");
+                        int employeeTwo = input.nextInt();
+                        if (employeeOne > 0 && employeeOne <= employees && employeeTwo > 0 && employeeTwo <= employees) {
+                            Salary.Compare(Employees[employeeOne - 1], Employees[employeeTwo - 1]);
+                        } else {
+                            System.out.println("Invalid Employee numbers.");
+                        }
                     }
                 }
             }
