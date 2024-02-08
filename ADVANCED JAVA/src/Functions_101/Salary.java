@@ -1,4 +1,4 @@
-/* 
+/*
  * 4)	A program is required that accepts the basic salary, allowance and tax
  *  rate and computes the tax amount and net salary of an employee. The computations
  *  are done as follows: -
