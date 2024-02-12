@@ -15,7 +15,8 @@
  */
 package Classes_102;
 import java.util.Scanner;
-public class UsedCar {
+
+public class UsedCar{
     private String Reg_no;
     private String Make;
     private double Mileage;
@@ -31,15 +32,44 @@ public class UsedCar {
         this.Selling_price = Selling_price;
         this.prevOwner = prevOwner;
     }
-    public String inputErrorHandling(Scanner prompt, String message){
-        while(true){
-            try{
+    // Default constructor
+    public UsedCar() {
+        this("", "", 0.0, 0.0, 0.0, "");
+    }
+
+    public void input(int carObj_num, Scanner prompt) {
+        System.out.println("__________________ CAR " + carObj_num + " DATA ENTRY__________________");
+        Reg_no = inputErrorHandling(prompt, "Please enter the registration_number for the vehicle: ");
+        Make = inputErrorHandling(prompt, "Enter make of the vehicle: ");
+        Mileage = Double.parseDouble(inputErrorHandling(prompt, "Please enter the mileage for the vehicle: "));
+        Buying_price = Double.parseDouble(inputErrorHandling(prompt, "Please enter the Buying price for the vehicle: "));
+        Selling_price = Double.parseDouble(inputErrorHandling(prompt, "Please enter the Selling price for the vehicle: "));
+        prevOwner = inputErrorHandling(prompt, "Please enter the previous owner for the vehicle: ");
+    }
+
+    private String inputErrorHandling(Scanner prompt, String message) {
+        while (true) {
+            try {
                 System.out.println(message);
                 return prompt.nextLine();
-            } catch(Exception e){
+            } catch (Exception e) {
                 prompt.next();
                 System.out.println("Invalid input!!!");
             }
         }
+    }
+
+    public boolean isWithinPriceRange() {
+        return Selling_price >= 400000 && Selling_price <= 1000000;
+    }
+
+    @Override
+    public String toString() {
+        return "Registration Number: \t\t\t" + Reg_no +
+                "\nMake: \t\t\t\t" + Make +
+                "\nDistance Traveled: \t\t\t" + Mileage + " Km" +
+                "\nBuying Price: \t\t\t\t" + Buying_price + " Kshs" +
+                "\nSelling Price: \t\t\t" + Selling_price + " Kshs" +
+                "\nPrevious Owner: \t\t\t" + prevOwner + "\n";
     }
 }
