@@ -21,7 +21,7 @@
     	A default constructor that initializes all the member variables to 0.
     	An accessor function to provide access to the value in gross.
 */
-package Functions_101;
+package Classes_101;
 
 import java.util.Scanner;
 

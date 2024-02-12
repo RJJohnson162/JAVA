@@ -16,7 +16,7 @@
     	A default constructor.
     	An accessor function to provide access to the value in grade.
  */
-package Functions_101;
+package Classes_101;
 import java.util.Scanner;
 public class Student {
     private String Reg_no;

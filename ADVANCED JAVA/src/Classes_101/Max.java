@@ -1,4 +1,4 @@
-package Functions_101;
+package Classes_101;
 import java.util.Scanner;
 public class Max {
     public static double getInput(String message, Scanner input){

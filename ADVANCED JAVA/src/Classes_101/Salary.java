@@ -23,7 +23,7 @@
     	An accessor function to provide access to the value in basic_salary.
     	A function that will enable you to compare the net_salary for two employees in the main function and then outputs an appropriate message.
  */
-package Functions_101;
+package Classes_101;
 import java.util.Scanner;
 public class Salary {
     private double basic_salary;

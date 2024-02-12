@@ -1,4 +1,4 @@
-package Functions_101;
+package Classes_101;
 
 public class Employee2 {
     public static void main ( String[] args){

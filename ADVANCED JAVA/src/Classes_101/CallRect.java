@@ -1,4 +1,4 @@
-package Functions_101;
+package Classes_101;
 import java.util.Scanner;
 public class CallRect {
     public static void main (String[] args){

@@ -17,7 +17,7 @@
     	An accessor function to provide access to the value in perimeter.
 */
 
-package Functions_101;
+package Classes_101;
 import java.util.Scanner;
 
 public class Rectangle {
