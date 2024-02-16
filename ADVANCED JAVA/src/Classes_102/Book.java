@@ -51,17 +51,14 @@ public class Book {
         }
     }
     public void inputBookDetails(int Book_num) {
-        try (Scanner Prompt = new Scanner(System.in)) {
-            System.out.println("________________ BOOK " + Book_num + "________________");
-            ISBN = InputErrorHandling(Prompt, "Please enter the book ISBN: ");
-            Author = InputErrorHandling(Prompt, "Please enter the Author of the book:");
-            Title = InputErrorHandling(Prompt, "Enter the book Title: ");
-            Num_of_Pages = Integer.parseInt(InputErrorHandling(Prompt, "Enter the number of pages: "));
-            Price = Double.parseDouble(InputErrorHandling(Prompt, "Enter the price of the book: "));
-            Publication_year = Integer.parseInt(InputErrorHandling(Prompt, "Enter the publication year: "));
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid number format! Please enter a valid number.");
-        }
+        Scanner Prompt = new Scanner(System.in);
+        System.out.println("________________ BOOK " + Book_num + "________________");
+        ISBN = InputErrorHandling(Prompt, "Please enter the book ISBN: ");
+        Author = InputErrorHandling(Prompt, "Please enter the Author of the book:");
+        Title = InputErrorHandling(Prompt, "Enter the book Title: ");
+        Num_of_Pages = Integer.parseInt(InputErrorHandling(Prompt, "Enter the number of pages: "));
+        Price = Double.parseDouble(InputErrorHandling(Prompt, "Enter the price of the book: "));
+        Publication_year = Integer.parseInt(InputErrorHandling(Prompt, "Enter the publication year: "));
     }
     public boolean isValid(){
         return Price > 3500 && Num_of_Pages > 400;
@@ -69,10 +66,10 @@ public class Book {
     @Override
     public String toString(){
         return "\nISBN: \t\t\t\t" + ISBN +
-                "\nAuthor:\t\t\t" + Author +
+                "\nAuthor:\t\t\t\t" + Author +
                 "\nTitle:\t\t\t\t" + Title +
                 "\nNumber of Pages:\t\t" + Num_of_Pages +
-                "\nPrice:\t\t\t$" + Price +
-                "\nYear Published:\t\t" + Publication_year;
+                "\nPrice:\t\t\t\t$" + Price +
+                "\nYear Published:\t\t\t" + Publication_year;
     }
 }

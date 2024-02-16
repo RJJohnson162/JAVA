@@ -5,7 +5,8 @@ public class CallBook {
         int Num_of_Books;
 
         while(true){
-            try(Scanner input = new Scanner (System.in)){
+            Scanner input = new Scanner (System.in);
+            try{
                 System.out.println("Enter the number of books in your library:");
                 Num_of_Books=input.nextInt();
                 if(Num_of_Books > 0) break;  //Exit loop if user enters a positive integer
@@ -13,6 +14,7 @@ public class CallBook {
             } catch (InputMismatchException e){
                 System.out.println("Invalid entry, please enter an integer.");
             }
+            input.close();
         }
         Book[] Books = new Book[Num_of_Books];
 
