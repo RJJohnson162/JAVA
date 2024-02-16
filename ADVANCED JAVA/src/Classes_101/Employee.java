@@ -21,7 +21,7 @@ public class Employee {
             //Create an array of employee objects and populate it with user-inputted data
             Salary[] Employees = new Salary[employees];
 
-            for(int i=0; i<Employees.length; i++){
+            for(int i = 0; i<Employees.length; i++){
                 Employees[i] = new Salary();
                 Employees[i].input(1 + i);
                 Employees[i].output(i + 1);
